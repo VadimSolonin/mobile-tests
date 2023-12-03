@@ -1,5 +1,5 @@
 # Разрабатываем автотесты с Browserstack
-При помощи инспектора в Browserstack разработаны автотесты на iOS / Android с исползованием Selenide.
+При помощи инспектора в Browserstack разработаны автотесты на iOS / Android с использованием Selenide.
 
 Для запуска тестов на ОС android:
 ```shell
