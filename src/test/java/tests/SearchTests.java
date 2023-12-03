@@ -20,7 +20,7 @@ public class SearchTests extends TestBase {
     @DisplayName("Проверка наличия элементов в результатах поиска")
     @Test
     @Tag("android")
-    void successfulSearchTest() {
+    void verifyNumberOfSearchResultTest() {
         step("Ввести в строку поиска значение Appium", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
@@ -33,7 +33,7 @@ public class SearchTests extends TestBase {
     @DisplayName("Проверка наличия в меню кнопки логина и её текста")
     @Test
     @Tag("android")
-    void successfulSearchTest2() {
+    void verifyLoginButtonTextTest() {
         step("Нажать на кнопку с тремя точками", () -> {
             $(id("org.wikipedia.alpha:id/menu_overflow_button")).click();
         });
@@ -46,8 +46,8 @@ public class SearchTests extends TestBase {
 
     @Test
     @Tag("ios")
-    void uiElementsTest() {
-        step("Проверка отображения элементов на главной", () -> {
+    void verifyMainPageElementsExistingTest() {
+        step("Проверка отображения элементов на главной странице", () -> {
             $(AppiumBy.className("XCUIElementTypeStaticText")).$(AppiumBy.name("UI Elements")).should(exist);
             $(AppiumBy.name("Text Button")).shouldBe(Condition.visible);
             $(AppiumBy.name("Text")).shouldBe(Condition.visible);
