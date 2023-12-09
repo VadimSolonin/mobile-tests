@@ -3,9 +3,9 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${os}.properties"
+        "classpath:${deviceHost}.properties"
 })
-public interface MobileConfig extends org.aeonbits.owner.Config {
+public interface BrowserstackConfig extends org.aeonbits.owner.Config {
     @Key("browserstackAccessKey")
     String getAccessKey();
 

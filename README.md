@@ -1,14 +1,16 @@
-# Разрабатываем автотесты с Browserstack
-При помощи инспектора в Browserstack разработаны автотесты на iOS / Android с использованием Selenide.
+# Мобильные автотесты
+В репозитории представлены автотесты:
+- Разработанные при помощи инспектора в Browserstack на iOS / Android
+- Разработанные при помощи Appium Server & Appium Inspector
 
 Для запуска тестов на ОС android:
 ```shell
-gradle clean android -Dos=android
+gradle clean android -DdeviceHost==browserstackAndroid
 ```
 
 Для запуска тестов на ОС ios:
 ```shell
-gradle clean ios -Dos=ios
+gradle clean ios -DdeviceHost=browserstackIos
 ```
 
 Для запуска тестов на устройстве, подключенном по USB:
