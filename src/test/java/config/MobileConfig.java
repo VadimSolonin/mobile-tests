@@ -3,27 +3,27 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${env}.properties"
+        "classpath:${os}.properties"
 })
 public interface MobileConfig extends org.aeonbits.owner.Config {
-    @Key("browserstack.accessKey")
+    @Key("browserstackAccessKey")
     String getAccessKey();
 
-    @Key("browserstack.userName")
+    @Key("browserstackUserName")
     String getUserName();
 
-    @Key("browserstack.url")
+    @Key("browserstackUrl")
     String getUrl();
 
-    @Key("browserstack.device")
+    @Key("browserstackDevice")
     @DefaultValue("Google Pixel 3")
     String getDevice();
 
-    @Key("browserstack.os_version")
+    @Key("browserstackOsVersion")
     @DefaultValue("9.0")
     String getOS();
 
-    @Key("browserstack.app")
+    @Key("browserstackApp")
     @DefaultValue("bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c")
     String getApp();
 }
