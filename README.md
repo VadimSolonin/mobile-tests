@@ -1,19 +1,19 @@
 # Мобильные автотесты
-В репозитории представлены автотесты:
-- Разработанные при помощи инспектора в Browserstack на iOS / Android
-- Разработанные при помощи Appium Server & Appium Inspector
+В репозитории представлены автотесты, разработанные при помощи:
+- Browserstack на iOS и Android
+- Appium Server & Appium Inspector
 
-Для запуска тестов на ОС android:
+Для запуска тестов Browserstack на ОС android:
 ```shell
 gradle clean android -DdeviceHost==browserstackAndroid
 ```
 
-Для запуска тестов на ОС ios:
+Для запуска тестов Browserstack на ОС ios:
 ```shell
 gradle clean ios -DdeviceHost=browserstackIos
 ```
 
-Для запуска тестов на устройстве, подключенном по USB:
+Для запуска тестов на устройстве android, подключенном по USB:
 ```shell
 gradle clean wikipediaLocal -DdeviceHost=localDevice
 ```
