@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${deviceHost}.properties"
+        "classpath:${envMobile}.properties"
 })
 public interface BrowserstackConfig extends org.aeonbits.owner.Config {
     @Key("browserstackAccessKey")

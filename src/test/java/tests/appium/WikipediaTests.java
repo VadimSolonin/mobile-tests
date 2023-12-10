@@ -2,6 +2,7 @@ package tests.appium;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -11,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 
 
 public class WikipediaTests extends TestBase {
+    TestData testData = new TestData();
 
     @Tag("wikipediaEmulator")
     @Test
@@ -18,7 +20,7 @@ public class WikipediaTests extends TestBase {
         back();
         step("Проверить, что на вкладке `Explore` есть заголовок с сегодняшней датой", () -> {
             $(id("org.wikipedia.alpha:id/nav_tab_explore")).getAttribute("selected");
-            $(id("org.wikipedia.alpha:id/day_header_text")).shouldHave(text("Dec 9, 2023"));
+            $(id("org.wikipedia.alpha:id/day_header_text")).shouldHave(text(testData.currentDate));
         });
         step("Перейти на вкладку `Saved`", () -> {
             $(id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click();
@@ -53,6 +55,5 @@ public class WikipediaTests extends TestBase {
             $(id("org.wikipedia:id/main_drawer_settings_container")).getAttribute("displayed");
             $(id("org.wikipedia:id/main_drawer_donate_container")).getAttribute("displayed");
         });
-
     }
 }
