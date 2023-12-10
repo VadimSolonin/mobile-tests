@@ -1,4 +1,4 @@
-package tests.appium;
+package tests;
 
 import utils.Utils;
 
